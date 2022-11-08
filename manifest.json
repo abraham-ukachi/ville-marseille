@@ -1,0 +1,33 @@
+{
+  "name": "CV - abraham ukachi",
+  "short_name": "abCV",
+  "description": "A static version of Abraham Ukachi's curriculum vitae",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#A67C52",
+  "background_color": "#A67C52",
+  "icons": [
+    {
+
+      "src": "assets/images/manifest/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+
+      "src": "assets/images/manifest/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/manifest/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/manifest/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
