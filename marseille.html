@@ -75,9 +75,11 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/marseille.css">
+    <!-- NOTE: Uncomment & update/edit the stylesheet link below -->
+    <!-- <link rel="stylesheet" href="css/marseille-xxx.css" -->
     
     <!-- Script -->
-    <!-- <script src="script/marseille.js"></script> -->
+    <script src="script/marseille.js"></script>
 
   </head>
   
@@ -88,7 +90,19 @@
     <div id="layout" class="vertical flex-layout">
     
       <!-- Header -->
+      <!-- NOTE: try the `smooth` attribute to fall in love #LOL -->
       <div id="header" class="vertical flex-layout">
+
+        <!-- Wallpaper Image -->
+        <!-- <img class="wallpaper" src="assets/images/marseille-wallpaper.jpg" fit> -->
+
+        <!-- Wallpaper Video -->
+        <!-- <video class="wallpaper" autoplay>
+          <source src="assets/videos/marseille-video.mp4">
+        </video> -->
+          
+        <!-- Overlay -->
+        <div class="overlay" fit></div>
 
         <!-- ToolBar -->
         <div id="toolbar" class="vertical flex-layout centered">
@@ -125,13 +139,11 @@
 
         <!-- Header Container -->
         <div class="container vertical flex-layout">
-
+          
           <!-- Title -->
-          <h1 title>Ville de Marseille</h1>
-
-          <!-- preview-Wrapper -->
-          <div class="preview-wrapper"></div>
-          <!-- End of Preview-Wrapper -->
+          <h1 class="title">Ville de Marseille</h1>
+          <!-- Description -->
+          <p class="description">This is a short description about the amazing city of Marseille</p>
 
           <!-- Divider-Wrapper -->
           <!-- <span class="divider-wrapper"><span class="divider"></span></span> -->
@@ -145,19 +157,82 @@
     
       <!-- Content -->
       <main id="content" class="vertical flex-layout">
-        
-        <!-- First Section -->
+
+
+        <!-- First section -->
         <section>
 
-          <p>Add the <b>&lt;body&gt;</b> of your <code>.html</code> here</p>
+          <!-- First article in the first section -->
+          <article>
+
+            <!-- Image/photo of Article -->
+            <img src="assets/images/marseille-photo1.jpg" alt="Marseille Photo 1">
+
+            <!-- First Article -->
+            <h2>First Article</h2>
+
+            <!-- Paragraph of Article -->
+            <p><strong>Paragraph of the article #1</strong> - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh, sit amet <em>hello, Rim</em> tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam hendrerit molestie.</p>
+
+          </article>
+          <!-- End of First article in the first section -->
+
+
+
+
+
+
+
+          <!-- Second article with Flex Layout -->
+          <article class="flex-layout">
+
+            <!-- Image/photo of Article -->
+            <img src="assets/images/marseille-photo2.jpg" alt="Marseille Photo 2">
+            
+            <div>
+              <!-- Second Article -->
+              <h2>Second Article</h2>
+
+              <!-- Paragraph of Article -->
+              <p><strong>Paragraph of the article #2</strong> - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh, <em>hello, Chris</em> sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam hendrerit molestie.</p>
+            </div>
+
+          </article>
+          <!-- End of Second article with Flex Layout -->
+
+
+
+
+
+
+
+          <!-- Third article with Video -->
+          <article class="flex-layout reverse">
+
+            <!-- Video of Article -->
+            <video controls>
+              <source src="assets/videos/marseille-video.mp4" type="video/mp4">
+            </video>
+            
+            <div>
+              <!-- Title of Article -->
+              <h2>Third Article</h2>
+
+              <!-- Paragraph of Article -->
+              <p><strong>Paragraph of the article #3</strong> - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh, sit amet <em><b>hello, Alon</b></em> tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam hendrerit molestie.</p>
+
+            </div>
+
+          </article>
+          <!-- End of Third article with Video -->
+
 
         </section>
         <!-- End of First Section -->
-        
+
 
       </main>
       <!-- End of Content -->
-
 
        
       <!-- Footer Tabs -->
@@ -167,40 +242,40 @@
         <span class="divider-wrapper"><span class="divider"></span></span>
 
         <!-- Home - Tab -->
-        <a id="homeTab" class="tab" href="marseille-home.html" active>
-          <button class="vertical flex-layout centered" naked>
+        <a class="tab" href="marseille-home.html" active>
+          <button id="homeTabButton" class="vertical flex-layout centered" naked>
             <span class="material-icons-round icon">home</span>
             <span class="label txt caption md-inactive">Home</span>
           </button>
         </a>
 
         <!-- News - Tab -->
-        <a id="newsTab" class="tab" href="marseille-news.html">
-          <button class="vertical flex-layout centered" naked>
+        <a class="tab" href="marseille-news.html">
+          <button id="newsTabButton" class="vertical flex-layout centered" naked>
             <span class="material-icons icon">feed</span>
             <span class="label txt caption md-inactive">News</span>
           </button>
         </a>
          
         <!-- Park Tab -->
-        <a id="parkTab" class="tab" href="marseille-history.html">
-          <button class="vertical flex-layout centered" naked>
+        <a class="tab" href="marseille-history.html">
+          <button id="parksTabButton" class="vertical flex-layout centered" naked>
             <span class="material-icons icon">park</span>
             <span class="label txt caption md-inactive">Parks</span>
           </button>
         </a>
 
         <!-- Beach Tab -->
-        <a id="beachTab" class="tab" href="marseille-contact.html">
-          <button class="vertical flex-layout centered" naked>
+        <a class="tab" href="marseille-contact.html">
+          <button id="beachTabButton" class="vertical flex-layout centered" naked>
             <span class="material-icons icon">beach_access</span>
             <span class="label txt caption md-inactive">Beach</span>
           </button>
         </a>
 
         <!-- Contact Tab -->
-        <a id="moreTab" class="tab" href="#more">
-          <button class="vertical flex-layout centered" naked>
+        <a class="tab" href="#more">
+          <button id="moreTabButton" class="vertical flex-layout centered" naked>
             <span class="material-icons icon">more_horiz</span>
             <span class="label txt caption md-inactive">More</span>
           </button>
@@ -211,6 +286,12 @@
        
     </div>
     <!-- End of Layout --> 
+
+
+    <!-- Backdrop -->
+    <div id="backdrop" class="fade-in" fit hidden></div>
+
+    <!--  -->
 
   </body>
 

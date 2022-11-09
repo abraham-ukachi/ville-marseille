@@ -1,9 +1,10 @@
 {
-  "name": "CV - abraham ukachi",
-  "short_name": "abCV",
-  "description": "A static version of Abraham Ukachi's curriculum vitae",
+  "name": "Marseille Bebe",
+  "short_name": "marseille-bebe",
+  "description": "A school project to create a website about Marseille and all its goodness.",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "theme_color": "#A67C52",
   "background_color": "#A67C52",
   "icons": [

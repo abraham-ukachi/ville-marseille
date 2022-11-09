@@ -5,12 +5,12 @@ A school project to create a website about Marseille and all its goodness.
 This project has the following **contributors**:
 
 1. [Abraham](https://github.com/abraham-ukachi)
-2. [Rim](https://github.com/rim-moghali)
-3. [Christophe](https://github.com/christophe-ciccaldi)
+2. [Rim](https://github.com/rim-moghlali)
+3. [Christophe](https://github.com/christophe-ceccaldi)
 4. [Catherine](https://github.com/catherine-tranchand)
 5. [Alon](https://github.com/alon-bendavid)
 
-> NOTE:
+> NOTE: **Abraham** (a.k.a moi) is the owner of the `origin/main` [branch](https://github.com/abraham-ukachi/ville-marseille/tree/main), and others each had a unique branch (ie. [rim](https://github.com/abraham-ukachi/ville-marseille/tree/rim), [chris](https://github.com/abraham-ukachi/ville-marseille/tree/chris), [katia](https://github.com/abraham-ukachi/ville-marseille/tree/katia) and [alon](https://github.com/abraham-ukachi/ville-marseille/tree/alon)).
 
 ## Description
 
@@ -26,7 +26,7 @@ These are a couple of the main requirements for this school project:
 
 > MOTTO: We'll always do [**more**](#More) 😜
 
-The official deadline of the jobs below - according to [intra](https://intra.laplateforme.io) - was **-**.
+The official deadline of the jobs below - according to [intra](https://intra.laplateforme.io) - was **12/11/2022 at 09:07**.
 
 | No. | Job                                           | Status      |
 | --- | --------------------------------------------- | ----------- |
@@ -73,7 +73,8 @@ The folder & file structure of this project:
 - manifest.json
 - ...
 - **marseille.html**
-- **s.css**
+- **marseille-parks.html**
+- **marseille-museums.html**
 
 > NOTE: This is just a snippet.
 
