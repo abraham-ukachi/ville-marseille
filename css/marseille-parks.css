@@ -1,0 +1,9 @@
+/* p{
+    color: aqua;
+}
+
+@media (min-width: 460px){
+    p{
+        color: rgb(255, 8, 8);
+    }  
+} */
