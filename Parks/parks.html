@@ -1,32 +1,366 @@
+<!--
+  ~ @license
+  ~ Ville Marseille
+  ~ Copyright (C) 2022. Marseille_BB (Abraham, Rim, Chris, Alon & Catherine).
+  ~ 
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~ 
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+-->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+  <!-- Head -->
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Ville Marseille" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes"
+    />
+    <meta name="description" content="Ville Marseille" />
+
+    <!-- MOTTO -->
+    <meta name="motto" content="We'll always do more ;)" />
+
+    <!-- Title -->
+    <title>Ville Marseille</title>
+
+    <!-- Fonts, Fonts, Fonts !!! -->
+    <!-- NOTE: I really don't like doing it this way but I run outta time , soo....:( -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Mulish Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Roboto Font -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Material Icons - https://github.com/google/material-design-icons/tree/master/font -->
+    <!-- https://material.io/resources/icons/?style=baseline -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Base -->
+    <!-- <base href="/"> -->
+
+    <link rel="icon" href="assets/images/favicon.ico" />
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- See https://goo.gl/qRE0vM -->
+    <meta name="theme-color" content="#A67C52" />
+
+    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Ville Marseille" />
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Favorite Apps" />
+
+    <!-- Homescreen icons -->
+    <link rel="apple-touch-icon" href="assets/images/manifest/icon-48x48.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="assets/images/manifest/icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="96x96"
+      href="assets/images/manifest/icon-96x96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="assets/images/manifest/icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="assets/images/manifest/icon-192x192.png"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/marseille.css" />
+
+    <!-- Script -->
+    <!-- <script src="script/marseille.js"></script> -->
   </head>
-  <body>
-    <main>
-      <h1>Parcs et jardins à Marseille</h1>
 
-      <img class="application_logo" src="images\434x0w.webp" alt="" />
+  <!-- Body -->
+  <body class="theme dark" fullbleed>
+    <!-- Layout -->
+    <div id="layout" class="vertical flex-layout">
+      <!-- Header -->
+      <div id="header" class="vertical flex-layout">
+        <!-- ToolBar -->
+        <div id="toolbar" class="vertical flex-layout centered">
+          <!-- ToolBar Container -->
+          <div class="container horizontal flex-layout center">
+            <!-- Logo -->
+            <svg
+              id="logo"
+              xml:space="preserve"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path
+                d="m1.8 20.5 9.3-17v17zM22.2 7.7l-9.3-4.2v17l9.3-4.2-4.7-4.3z"
+              />
+              <path d="m12.9 20.5 9.3-4.2-9.3-8.6z" opacity=".1" />
+            </svg>
 
-      <div class="park_description">
-        <h2 class="h2_text"><a href=""></a>Le Parc Borely</h2>
+            <!-- <span flex></span> -->
 
-        <p class="tiny">
-          Ce jardin de 17 hectares abrite une bastide du XVIIIe siècle (Musée)
-          mise en valeur par un jardin « à la française » et un parc paysager du
-          XIXe siècle. Ses allées sont très prisées des joggers et des
-          promeneurs qui apprécient également de flâner entre les massifs de la
-          roseraie ou de découvrir les espèces rares du jardin botanique. Le
-          plan d’eau, son embarcadère, sa buvette et son restaurant (en attente
-          d’une nouvelle gérance) complètent les multiples attractions du site.
-          Le Parc Borély est aussi un paradis des enfants doté de deux aires de
-          jeux. Allée Borély – 13008
-        </p>
+            <!-- Icon Buttons -->
+            <div class="icon-buttons horizontal flex-layout">
+              <!-- Theme - Icon Button -->
+              <button
+                id="themeIconButton"
+                class="icon-button horizontal flex-layout centered"
+                naked
+              >
+                <span class="material-icons-round md-light md-24"
+                  >format_paint</span
+                >
+              </button>
+
+              <!-- Search - Icon Button -->
+              <button
+                id="searchIconButton"
+                class="icon-button horizontal flex-layout centered"
+                naked
+              >
+                <span class="material-icons-round md-light md-24">search</span>
+              </button>
+            </div>
+            <!-- End of Icon Buttons -->
+          </div>
+          <!-- End of ToolBar Container -->
+        </div>
+        <!-- End of ToolBar -->
+
+        <!-- Header Container -->
+        <div class="container vertical flex-layout">
+          <!-- Title -->
+          <h1 title>Le Parc Borely</h1>
+
+          <!-- preview-Wrapper -->
+          <div class="preview-wrapper"></div>
+          <!-- End of Preview-Wrapper -->
+
+          <!-- Divider-Wrapper -->
+          <!-- <span class="divider-wrapper"><span class="divider"></span></span> -->
+        </div>
+        <!-- End of Header Container -->
       </div>
-    </main>
+      <!-- End of Header -->
+
+      <!-- Content -->
+      <main id="content" class="vertical flex-layout">
+        <!-- First Section -->
+        <section>
+          <h1>Parcs et jardins à Marseille</h1>
+          <h2>Des jardins remarquables</h2>
+          <div>
+            <h3>Le Parc Borely</h3>
+            <p>
+              Ce jardin de 17 hectares abrite une bastide du XVIIIe siècle
+              (Musée) mise en valeur par un jardin « à la française » et un parc
+              paysager du XIXe siècle. Ses allées sont très prisées des joggers
+              et des promeneurs qui apprécient également de flâner entre les
+              massifs de la roseraie ou de découvrir les espèces rares du jardin
+              botanique. Le plan d’eau, son embarcadère, sa buvette et son
+              restaurant (en attente d’une nouvelle gérance) complètent les
+              multiples attractions du site. Le Parc Borély est aussi un paradis
+              des enfants doté de deux aires de jeux. Allée Borély – 13008
+            </p>
+            <img src="assets\images\parcs\Château_Borély.jpg" alt="borely" />
+          </div>
+          <div>
+            <h3>Parc du 26e Centenaire</h3>
+            <p>
+              Parc Urbain de 10 hectares situé en plein coeur de Marseille, sur
+              le site de l’ancienne gare du Prado. On y trouve un terrain de
+              boules, et 2 aires de jeux pour enfants. En 2002 les 4 jardins
+              thématiques ont été aménagés (provençal, oriental, africain et
+              asiatique) symbolisant le brassage des cultures propres à
+              Marseille. Rond-point Zino Francescatti – 13010
+            </p>
+            <img src="assets\images\parcs\Parc Centenaire.jpg" alt="" />
+          </div>
+          <div>
+            <h3>Parc de la Magalone</h3>
+            Au cœur de ce jardin niché sur le boulevard Michelet (surface 1,4
+            hectare), on trouve une des rares bastides du XVIIIe siècle, son
+            propriétaire Messire Raphaël de Magalon, lui donna son nom. Le
+            jardin fut redessiné en 1901 par le paysagiste Edouard André.
+            Véritable jardin baroque, les valeurs et les perspectives, les
+            espaces et les profondeurs prennent tout leur relief en y dessinant
+            des formes géométriques. 245 , Boulevard Michelet – 13009
+            <img src="assets\images\parcs\Parc de la Magalone.jpg" alt="" />
+          </div>
+
+          <h2>Des jardins classés Monuments historiques</h2>
+          <div>
+            <h3>Parc du Palais Longchamp</h3>
+            <p>
+              Le Parc Longchamp, s’est constitué au fil du temps, par la
+              stratification des différents projets, imaginés ou réalisés sur le
+              site, depuis le XIXe siècle. Le parc Longchamp, le parc Borély, le
+              jardin de la Magalone et le parc du 26ème centenaire, ont obtenu
+              en 2005 le label « jardin remarquable » décerné par le Ministère
+              de la Culture. Ce fut un Jardin zoologique, de 1854 à 1987. En
+              savoir plus sur le Parc du Palais Longchamp. Place Henri Dunant –
+              13004
+            </p>
+            <img
+              src="assets\images\parcs\Parc du Palais Longchamp.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <h3>Le jardin du Port Antique (Le jardin des Vestiges)</h3>
+            <p>
+              Le site du Port Antique (dénommé Jardin des vestiges à son
+              ouverture au public en 1983) présente les résultats des premières
+              grandes fouilles archéologiques urbaines réalisées en France. Les
+              vestiges, révélés en 1967 sur le chantier de construction du
+              Centre Bourse, sont des témoins historiques majeurs. Le site se
+              structure autour de la voie romaine, des remparts grecs et autour
+              du Port Antique où a été découverte la plus grande épave visible
+              au monde. Cette voie romaine longée par des monuments funéraires
+              pénètre dans la ville par une entrée monumentale. L’entrée se fait
+              par le Musée d’Histoire, à l’intérieur du Centre Bourse.
+            </p>
+            <img
+              src="assets\images\parcs\Le jardin du Port Antique.jpg"
+              alt=""
+            />
+          </div>
+          <h2>
+            Les autres parcs et jardins exceptionnels de la ville de Marseille
+          </h2>
+          <div>
+            <h3>Parc de la Buzine</h3>
+            <p>
+              Le château de la Buzine doit sa renommée à Marcel Pagnol. L’ayant
+              acheté avec le projet d’y ouvrir une véritable Cité du cinéma,
+              l’écrivain eut la surprise en arrivant sur place de reconnaître
+              l’édifice qu’il longeait en famille sur le chemin de la Treille,
+              et qui deviendrait – et restera pour toujours – « Le Château de ma
+              mère ». 56 , Traverse De la Buzine – 13011
+            </p>
+            <img src="assets\images\parcs\Parc de la Buzine.jpg" alt="" />
+          </div>
+          <div>
+            <h3>Jardin du Pharo</h3>
+            <p>
+              Le jardin Emile Duclaux qui entoure le Palais du Pharo, se
+              caractérise par une vue imprenable offerte sur le Vieux-Port et la
+              côte nord de Marseille. Des cheminements, situés en bord de
+              falaise, permettent en effet aux promeneurs de découvrir des
+              points de vue étonnants et le site est idéal pour observer le
+              ballet des ferries quittant le port, véritable invitation au
+              voyage…Lors d’un séjour à Marseille en 1852, Louis Napoléon séduit
+              par le site, émit le souhait de disposer d’une résidence les pieds
+              dans l’eau. Le 15 août 1858 était posée la première pierre du
+              Palais du Pharo. En savoir plus sur le Palais du Pharo. Boulevard
+              Charles Livon – 13007 Marseille
+            </p>
+            <img src="assets\images\parcs\Jardin du Pharo.jpg" alt="" />
+          </div>
+          <div>
+            <h3>Le Parc Pastré</h3>
+            <p>
+              Entre la Pointe Rouge et la Grotte Rolland, le parc Pastré s’étire
+              sur 112 hectares, jusqu’aux collines de Marseilleveyre. En 1974,
+              la Comtesse Pastré, céda la majeure partie de sa propriété à la
+              ville. Devenu, depuis un immense parc public, ce site est l’un des
+              plus beaux fleurons du patrimoine municipal. Deux étangs, un
+              canal, des aires et terrains de jeux, des sentiers de randonnées
+              séduisent ses nombreux usagers. La partie haute des lieux conserve
+              son caractère sauvage et s’ouvre sur les collines de
+              Marseilleveyre et la découverte des calanques. Toute la zone
+              boisée du parc fait partie du site classé des calanques et en
+              constitue une porte d’entrée pour les amateurs de randonnées. 155,
+              Avenue de Montredon – 13008
+            </p>
+            <img src="assets\images\parcs\Le Parc Pastré.jpg" alt="" />
+          </div>
+        </section>
+        <!-- End of First Section -->
+      </main>
+      <!-- End of Content -->
+
+      <!-- Footer Tabs -->
+      <nav id="footerTabs" class="horizontal flex-layout">
+        <!-- Divider-Wrapper -->
+        <span class="divider-wrapper"><span class="divider"></span></span>
+
+        <!-- Home - Tab -->
+        <a id="homeTab" class="tab" href="marseille-home.html" active>
+          <button class="vertical flex-layout centered" naked>
+            <span class="material-icons-round icon">home</span>
+            <span class="label txt caption md-inactive">Home</span>
+          </button>
+        </a>
+
+        <!-- News - Tab -->
+        <a id="newsTab" class="tab" href="marseille-news.html">
+          <button class="vertical flex-layout centered" naked>
+            <span class="material-icons icon">feed</span>
+            <span class="label txt caption md-inactive">News</span>
+          </button>
+        </a>
+
+        <!-- Park Tab -->
+        <a id="parkTab" class="tab" href="marseille-history.html">
+          <button class="vertical flex-layout centered" naked>
+            <span class="material-icons icon">park</span>
+            <span class="label txt caption md-inactive">Parks</span>
+          </button>
+        </a>
+
+        <!-- Beach Tab -->
+        <a id="beachTab" class="tab" href="marseille-contact.html">
+          <button class="vertical flex-layout centered" naked>
+            <span class="material-icons icon">beach_access</span>
+            <span class="label txt caption md-inactive">Beach</span>
+          </button>
+        </a>
+
+        <!-- Contact Tab -->
+        <a id="moreTab" class="tab" href="#more">
+          <button class="vertical flex-layout centered" naked>
+            <span class="material-icons icon">more_horiz</span>
+            <span class="label txt caption md-inactive">More</span>
+          </button>
+        </a>
+      </nav>
+      <!-- End of Footer Tabs -->
+    </div>
+    <!-- End of Layout -->
   </body>
 </html>
