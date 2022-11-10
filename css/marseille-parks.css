@@ -3,7 +3,7 @@
 @media (min-width: 1000px){
     article{
         display: flex;
-        width: 80%;
+        width: 95%;
         /* background-color: aqua; */
         align-items: center;
        
@@ -12,6 +12,7 @@
                
                /* height: auto; */
                width: 40rem;
+               height: 45vh;
                /* height: 25rem; */
                
     
