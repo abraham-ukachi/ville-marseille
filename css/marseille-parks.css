@@ -46,9 +46,10 @@ section h2{
         margin-left: 2rem;
         /* background-color: aqua; */
         width: 50%;
+        height: 100%;
         
         /* width: 20%; */
-        align-items: flex-start;
+        /* align-items: flex-start; */
            
     }
 
