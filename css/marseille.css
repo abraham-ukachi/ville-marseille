@@ -715,6 +715,7 @@ ul[naked], li[naked] {
 #layout {
   flex: 1 auto;
   background: var(--background-color);
+  overflow: scroll;
 }
 
 
@@ -767,7 +768,8 @@ video.wallpaper {}
   /* padding: var(--header-padding, 8px 16px); */
   /* padding-top: var(--toolbar-height, 60px); */
   overflow: hidden;
-  height: 300px;
+  height: var(--header-height, 300px);
+  min-height: var(--header-height, 300px); /* HACK (temp. solution): previous height wasn't detected */
 }
 
 
@@ -808,6 +810,15 @@ video.wallpaper {}
   height: var(--toolbar-height, 60px);
   background-color: var(--toolbar-background-color, inherit);
   z-index: 3;
+}
+
+/* Fixed Toolbar */
+#toolbar[fixed] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 /* Container of Toolbar */
@@ -929,7 +940,7 @@ span.divider {
 
 /* Footer Tabs */
 #footerTabs {
-  position: fixed;
+  position: relative; /* b4: position: fixed; */
   width: 100%;
   height: var(--footer-tabs-height, 60px);
   z-index: 10;
@@ -955,6 +966,11 @@ span.divider {
   text-decoration: none;
   width: calc(100vw / 5);
   height: inherit;
+}
+
+/* Button in active link of #footerTabs */
+#footerTabs a.tab[active] button {
+  color: var(--primary-color);
 }
 
 /* All buttons in #footerTabs */
@@ -1055,7 +1071,8 @@ span.divider {
 
   /* Header */
   #header {
-    height: 450px;
+    height: var(--header-height, 450px);
+    min-height: var(--header-height, 450px); /* HACK (temp. solution): previous height wasn't detected */
   }
   
   /* Header Container */
