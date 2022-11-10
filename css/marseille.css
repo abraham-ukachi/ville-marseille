@@ -1095,7 +1095,7 @@ span.divider {
   section > article.flex-layout img,
   section > article.flex-layout video {
     width: var(--article-object-width, 40%);
-    height: var(--article-object-height, auto);
+
   }
 
 

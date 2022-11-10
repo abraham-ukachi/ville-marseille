@@ -75,8 +75,9 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/marseille.css">
+
     <!-- NOTE: Uncomment & update/edit the stylesheet link below -->
-    <!-- <link rel="stylesheet" href="css/marseille-xxx.css" -->
+    <link rel="stylesheet" href="css/marseille-museums.css">
     
     <!-- Script -->
     <script src="script/marseille.js"></script>
@@ -144,7 +145,16 @@
           <!-- Title -->
           <h1 class="title"></h1>
           <!-- Description -->
-          <p class="description"></p>
+          <p class="description">
+          <p><b>Les musées de la ville de Marseille</b><br>
+            Les nombreux musées de Marseille proposent
+            des expositions permanentes ou temporaires 
+            autour de thèmes variés : Histoire de Marseille, 
+            mode, Antiquité, Histoire Naturelle ou encore art 
+            contemporain. Installés dans des édifices patrimoniaux
+            du XVIIe siècle ou d’architecture récente, les musées 
+            de Marseille sont répartis dans plusieurs quartiers.</p>
+          
 
           <!-- Divider-Wrapper -->
           <!-- <span class="divider-wrapper"><span class="divider"></span></span> -->
@@ -165,29 +175,28 @@
              
             <!--INTRODUCTION-->
             <article>
-                <h2>Les musées de la ville de Marseille</h2>
-                <p> es nombreux musées de Marseille proposent
-                    des expositions permanentes ou temporaires 
-                    autour de thèmes variés : Histoire de Marseille, 
-                    mode, Antiquité, Histoire Naturelle ou encore art 
-                    contemporain. Installés dans des édifices patrimoniaux
-                    du XVIIe siècle ou d’architecture récente, les musées 
-                    de Marseille sont répartis dans plusieurs quartiers.</p>
+              
+               
             </article>
             <!---END OF INTRODUCTION-->
 
              <!--THE FIRST ARTICLE AND IMAGE-->
-             <article> 
-                    <img src="assets/images/museums/mucem.jpg" alt="mucem">
+
+              <article id="mucem">
+             
+               <div>
+                    <h2>Le Mucem</h2>
                     <p><b>Trois sites, trois ambiances pour des propositions riches et surprenantes
                         à découvrir sur 40 000 m2 : le Mucem est un vrai musée du XXIe siècle, 
                         capable de séduire un vaste public avec une large palette d'activités.</b></p>
+
+
+                 <img src="assets/images/museums/mucem.jpg" class="larger" alt="mucem">
+
                     
                     <p>Les uns pourront voyager grâce aux expositions, les autres profiter d'une lecture, 
                         d'un concert, d'un débat, d'une projection... ou plus simplement d'une promenade 
-                        en plein air dans les jardins méditerranéens du fort Saint-Jean. </p>
-
-                        <p>
+                        en plein air dans les jardins méditerranéens du fort Saint-Jean. 
                         Le J4 : 15 000 m2.
                          Le nouveau musée, bâti sur l'ancien môle portuaire J4 par l'architecte Rudy Ricciotti, 
                         constituera le coeur palpitant du Mucem. Au rez-de-chaussée, une exposition de référence
@@ -205,34 +214,49 @@
                         et Lisbonne sont alors les points stratégiques de pouvoir et d'échanges dans une Méditerranée qui voit
                        naître la modernité entre grands empires et globalisation.Le Mucem conserve un patrimoine unique, 
                        regroupant une diversité d'objets originale dans le monde des musées : tableaux, estampes ou sculptures
-                       côtoient mobilier, outillage, véhicules, bijoux, décors de boutique, vêtements de fête ou traditionnels...</p1>  
+                       côtoient mobilier, outillage, véhicules, bijoux, décors de boutique, vêtements de fête ou traditionnels... 
                 
-                        </p>
+                     </p>
+               
 
                      <!--BUTTON-->
-                      <button> EN SAVOIR PLUS SUR LE MUCEM </button>
+                      <button>
+                        <a href="https://www.mucem.org/"> SAVOIR PLUS SUR LE MUCEM </a>
+                      </button>
+
                      <!--END OF THE BUTTON-->   
+                </div>  
             </article>
              
             <!---END OF THE FIRST ARTICLE-->
 
-            <!---THE SECOND ARTICLE AND IMAGE-->
+
+
+             <!---THE SECOND ARTICLE AND IMAGE-->
             
-                <article>
-                    <img src="assets/images/museums/charité.jpg" alt="charité">
-                    <p><b>Lieu emblématique de Marseille, la Vieille Charité est nichée au cœur du Panier,
+            <article class="flex-layout" id="charité">
+                <img src="assets/images/museums/charité.jpg" alt="charité">
+                <div>
+                    <h2>La Vieille Charité</h2>
+
+                    <p> Lieu emblématique de Marseille, la Vieille Charité est nichée au cœur du Panier,
                         le noyau historique de la ville. Merveille de l’architecture du XVIIe siècle,
                          La Vieille Charité symbolise à la fois la richesse du patrimoine marseillais 
                          et offre à la ville un haut lieu culturel. Restaurée, la Vieille Charité est 
                          devenue, depuis 1986, un centre pluridisciplinaire à vocation scientifique et 
                          culturelle de la Ville de Marseille. Elle est classée au titre des Monuments 
-                         Historiques.</b></p>
-                    <p>En 1640 le Conseil de Ville décide, selon la politique royale de « grand renfermement des pauvres » 
+                         Historiques. En 1640 le Conseil de Ville décide, selon la politique royale de 
+                         « grand renfermement des pauvres » 
                         de rassembler dans un lieu propre les pauvres natifs de Marseille.  
                         Il fallut attendre 1654 pour que les dirigeants envisagent de construire 
                         un ensemble d’immeubles plus appropriés aux besoins car il y avait déjà à 
-                        cette époque plus de 300 pauvres à la Charité. 
-                        En 1670, une association caritative au sein du Conseil des Echevins confie 
+                        cette époque plus de 300 pauvres à la Charité. </p>
+                </div>
+            </article>
+
+            <article>
+
+                    <p> En 1670, une association caritative au sein du Conseil des Echevins confie 
                         à Pierre Puget, architecte du roi et enfant du quartier, la réalisation d’un
                          Hôpital Général pour accueillir les mendiants et les pauvres.  
                         C’est seulement en 1671 qu’est posée la première pierre de ce qui sera 
@@ -241,8 +265,10 @@
                         L’ensemble se compose de quatre ailes de bâtiments fermés sur l’extérieur 
                         et ouverts par une galerie à 3 niveaux sur une cour rectangulaire intérieure.
                          Ils desservent de vastes espaces collectifs de travail et de vie, séparant les 
-                         femmes des hommes.  
-                        Au centre de la cour, la chapelle construite entre 1679 et 1707 est une œuvre 
+                         femmes des hommes.</p>
+                    
+
+                    <p> Au centre de la cour, la chapelle construite entre 1679 et 1707 est une œuvre 
                         architecturale remarquable à dôme ovoïde, parfait exemple du pur baroque italien.
                          La façade actuelle, laissée en attente, date de 1863, et reprend le thème de la Charité. 
                         Après la Révolution et jusqu’à la fin du XIXe siècle, la Charité devient un hospice
@@ -257,7 +283,7 @@
                         Depuis 1986, c’est un centre pluridisciplinaire à vocation scientifique et culturelle 
                         de la Ville de Marseille. </p>
                         
-                    <p>a Vieille Charité se compose de quatre ailes de bâtiment fermées sur l’extérieur et 
+                    <p>La Vieille Charité se compose de quatre ailes de bâtiment fermées sur l’extérieur et 
                         ouvertes sur une cour rectangulaire par des galeries sur trois niveaux qui rythment
                         la vie à l’intérieur de l’édifice. 
     
@@ -270,27 +296,36 @@
                         Elle fut bâtie entre 1861 et 1863.  </p>
 
                       <!--BUTTON-->
-                      <button> EN SAVOIR PLUS SUR LA VIEILLE CHARITÉ</button>
-                      <!--END OF THE BUTTON--> 
-                </article>
+                      <button> 
+                        <a href="https://vieille-charite-marseille.com/">SAVOIR PLUS SUR LA VIEILLE CHARITÉ</a>
+                      </button>
+                      <!--END OF THE BUTTON-->                 
+            </article>
 
                 <!---END OF THE SECOND ARTICLE-->
 
+                <!---THE THIRD ARTICLE AND IMAGE-->
 
-        <!---THE THIRD ARTICLE AND IMAGE-->
-        <article>
+        <article id="longchamp">
             <img src="assets/images/museums/longchamp.jpg" alt="longchamp">
 
-            <h1>Musée des Beaux Arts</h1>
-            <p><b>Le Musée des Beaux-Arts de Marseille est un des quinze premiers musées créés en 
+            <div>
+                <h2>Musée des Beaux Arts</h2>
+                <p>Le Musée des Beaux-Arts de Marseille est un des quinze premiers musées créés en 
                 France par le Consulat en 1801. Il est installé depuis 1869 dans l’aile gauche 
-                du Palais Lonchamp et présente des œuvres du XVIe au XIXe siècles.</b></p>
-            <p>Les œuvres de Lavinia Fontana, Guerchin, Lanfranco, Pannini et Tiepolo, illustrent 
-                l’évolution de la peinture en Italie de la fin de la renaissance au  XVIIIe siècle. 
-                Les écoles du Nord sont représentées par des tableaux de Jordaens, Stomer, et la Chasse
-                au sanglier, chef-d’œuvre de Rubens. Les tableaux de Champaigne, Vouet, Lesueur témoignent 
-                du renouveau de la peinture française pendant le règne de Louis XIII et ceux de Nattier, 
-                Vernet, Greuze, Hubert Robert ou David, du triomphe de l’école française au siècle des Lumières.</p>
+                du Palais Lonchamp et présente des œuvres du XVIe au XIXe siècles.</p>
+
+                <p>Les œuvres de Lavinia Fontana, Guerchin, Lanfranco, Pannini et Tiepolo, illustrent 
+                    l’évolution de la peinture en Italie de la fin de la renaissance au  XVIIIe siècle. 
+                    Les écoles du Nord sont représentées par des tableaux de Jordaens, Stomer, et la Chasse
+                    au sanglier, chef-d’œuvre de Rubens. Les tableaux de Champaigne, Vouet, Lesueur témoignent 
+                    du renouveau de la peinture française pendant le règne de Louis XIII et ceux de Nattier, 
+                    Vernet, Greuze, Hubert Robert ou David, du triomphe de l’école française au siècle des Lumières.</p>
+            </div>
+        </article>
+
+       
+        <article id="longchamp">
             <p>Une des caractéristiques de la collection du musée des Beaux-Arts est de témoigner du dynamisme 
                 des arts en Provence du XVIIe et XVIIIe siècles. Les œuvres du peintre Louis Finson, ami de Caravage,
                 de Jean Daret, Nicolas Mignard ou Michel Serre rappellent combien la Provence a su, durant deux siècles,
@@ -305,22 +340,27 @@
                 La Voix intérieure, chef-d’œuvre de Rodin, donné par le sculpteur au musée, les bustes des célébrités 
                 du Juste Milieu ou le Ratapoil de Daumier, sont les œuvres les plus célèbres de la galerie de sculpture
                 du XIXe siècle</p>
+        
 
               <!--BUTTON-->
-              <button> EN SAVOIR PLUS SUR LE MUSÉE DES BEAUX ARTS </button>
+            <button>
+                <a href="https://fr.wikipedia.org/wiki/Mus%C3%A9e_des_Beaux-Arts_de_Marseille"> EN SAVOIR PLUS SUR LE MUSÉE <br>
+                 DES BEAUX ARTS </a>
+            </button>
               <!--END OF THE BUTTON-->  
         
 
         </article>
 
     <!---THE FOURTH ARTICLE AND IMAGE-->
-        <article>
-        <img src="assets/images/museums/cosquer.jpg" alt="cosquer">
-        <p><b>Marseille est une ville riche de par son patrimoine culturel et historique, 
+        <article id="cosquer">
+            <img src="assets/images/museums/cosquer.jpg" alt="cosquer">
+            <h2>Le Cosquer</h2>
+            <p><b>Marseille est une ville riche de par son patrimoine culturel et historique, 
             mais saviez-vous qu’elle possède un véritable trésor préhistorique ? La grotte 
             Cosquer, ça vous dit quelque chose ? On vous dit tout sur cette pépite bien cachée
-             à plusieurs dizaines de mètres sous la surface de l’eau.</b></p>
-        <p> Commençons par le commencement. En 1985, Henri Cosquer, plongeur scaphandrier expérimenté, 
+             à plusieurs dizaines de mètres sous la surface de l’eau.</b>
+            Commençons par le commencement. En 1985, Henri Cosquer, plongeur scaphandrier expérimenté, 
             et passionné de fonds sous-marins, part plonger dans les Calanques, son vaste terrain de jeu.
             Ce jour-là, il plonge vers le cap de Morgiou, lieu qu’il a l’habitude d’arpenter. A 36 mètres de 
             profondeur, une cavité creusée dans la paroi rocheuse l’interpelle et il décide de l’explorer.
@@ -341,36 +381,12 @@
             devenir une priorité. La grotte est aujourd’hui inaccessible et son entrée a été condamnée.</p>
 
              <!--BUTTON-->
-             <button>SAVOIR PLUS SUR LE COSQUER</button>
+             <button>
+                <a href="https://www.grotte-cosquer.com/">SAVOIR PLUS SUR LE COSQUER</a>
+             </button>
              <!--END OF THE BUTTON-->
 
         </article>
-
-
-        
-
-
-
-
-          <!-- Third article with Video -->
-          <article class="flex-layout reverse">
-
-            <!-- Video of Article -->
-            <video controls>
-              <source src="assets/videos/marseille-video.mp4" type="video/mp4">
-            </video>
-            
-            <div>
-              <!-- Title of Article -->
-              <h2>Third Article</h2>
-
-              <!-- Paragraph of Article -->
-              <p><strong>Paragraph of the article #3</strong> - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh, sit amet <em><b>hello, Alon</b></em> tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam hendrerit molestie.</p>
-
-            </div>
-
-          </article>
-          <!-- End of Third article with Video -->
 
 
         </section>
