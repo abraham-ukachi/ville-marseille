@@ -1,9 +1,96 @@
-/* p{
-    color: aqua;
-}
 
-@media (min-width: 460px){
-    p{
-        color: rgb(255, 8, 8);
+
+@media (min-width: 1000px){
+    article{
+        display: flex;
+        width: 80%;
+        /* background-color: aqua; */
+        align-items: center;
+       
+    }
+    section > article img{
+               
+               /* height: auto; */
+               width: 40rem;
+               /* height: 25rem; */
+               
+    
+
+       
+       
+        
+
+        
+        
+        
     }  
-} */
+    section{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        /* background-color: chartreuse; */
+       
+          
+       
+    }
+section h2{
+    align-self: flex-start;
+    /* margin-bottom: 5rem; */
+    /* margin-top: 5rem; */
+}
+    .h2_para{
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+        /* background-color: aqua; */
+        width: 50%;
+        
+        /* width: 20%; */
+        align-items: flex-start;
+           
+    }
+
+    .list_menu{
+        display: flex;
+        /* background-color: aqua;  */
+        justify-content: space-around;
+        align-items: center;
+        /* margin-right: 200px; */
+        width: 60%;
+    }
+    .menu{
+    
+        color: white;
+        text-decoration: none;
+     
+        /* font-weight: lighter; */
+        font-size:  15px;
+         
+       
+    }
+    ul{
+        list-style: none;
+        
+    }
+    li{
+        position: relative;
+        cursor: pointer;
+    }
+    .link::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        
+        width: 0%;
+        height: 3px;
+        background-color: aqua;
+        transition: width 0.4s ease-out;
+
+    }
+    .link:hover.link::after{
+        width: 100%
+    }
+
+  
+ }
