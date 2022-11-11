@@ -1,7 +1,7 @@
 # `ville-marseille`
 A school project to create a website about Marseille and all its goodness.
 
-This project has the following **contributors**:
+We named our website **Marseille Bébé**, and this project has the following [**contributors**](#Contributors):
 
 1. [Abraham](https://github.com/abraham-ukachi)
 2. [Rim](https://github.com/rim-moghlali)
@@ -10,6 +10,7 @@ This project has the following **contributors**:
 5. [Alon](https://github.com/alon-bendavid)
 
 > NOTE: **Abraham** (a.k.a moi) is the owner of the `origin/main` [branch](https://github.com/abraham-ukachi/ville-marseille/tree/main), and others each had a unique branch (ie. [rim](https://github.com/abraham-ukachi/ville-marseille/tree/rim), [chris](https://github.com/abraham-ukachi/ville-marseille/tree/chris), [katia](https://github.com/abraham-ukachi/ville-marseille/tree/katia) and [alon](https://github.com/abraham-ukachi/ville-marseille/tree/alon)).
+
 
 ## Description
 > Original text in French: La ville de Marseille souhaite mettre un ensemble de renseignements à disposition des touristes et des habitants. Pour cela, elle a besoin d’un site web avec plusieurs pages. D'abord, il lui faut une page d’accueil aux couleurs de la ville, assez générique avec quelques informations et des articles d’actualité. Ensuite, elle souhaite plusieurs pages utilisant chacune un style approprié : une page sur l’histoire de Marseille, une liste des randonnées à proximité, une liste des plages, une liste des parcs publics, un annuaire des musées de la ville et un formulaire de contact. L’ensemble des pages doit être accessible depuis une barre de navigation avec au moins une liste déroulante. Chacune de vos pages doit utiliser le fichier css/marseille.css ET un fichier css/marseilleX.css dédié à la page. Les structures de vos pages doivent être
@@ -39,7 +40,8 @@ The official deadline of the jobs below - according to [intra](https://intra.lap
 > NOTE: (\*) = still needs to be updated
 
 
-## Ville de Marseille 
+## Ville de Marseille
+> A.K.A.: Marseille Bébé :)
 
 Here is a list of all the names, `.html` and `.css` files to be submitted and their corresponding / current **status** for this job:
 
@@ -84,6 +86,22 @@ The folder & file structure of this project:
 
 > NOTE: This is just a snippet.
 
+
+### Contributors 
+
+Below is a short list of the members of our group or **contributors** to this project:
+
+
+| No. | Fullname | Username | Branch | Page(s) |
+|:----|:---------|:---------|:-------|:--------|
+| 1 | [Abraham Ukachi](https://github.com/abraham-ukachi) | *`abraham-ukachi`* | **main** | *marseille.html*, <br> *marseille-news.html*, <br> *marseille-contact.html* |
+| 2 | [Rim Moghlali](https://github.com/rim-moghlali) | *`rim-moghlali`* | **rim** | *marseille-beach.html* |
+| 3 | [Christophe Ceccaldi](https://github.com/christophe-ceccaldi) | *`christophe-ceccaldi`* | **chris** | *marseille-history.html*, <br> *marseille-hikes.html* |
+| 4 | [Catherine Tranchand](https://github.com/catherine-tranchand) | *`catherine-tranchand`* | **katia** | *marseille-museums.html* |
+| 5 | [Alon Ben David](https://github.com/alon-bendavid) | *`alon-bendavid`* | **alon** | *marseille-parks.html* |
+
+
+> NOTE: 
 
 ### Installation
 
