@@ -31,6 +31,12 @@
   --opacity-text-inactive: 0.68;
   --opacity-text-active: 1;
 
+
+  /* Black & White - Color Filters */
+  /* NOTE: Filters below were auto-generated on *https://codepen.io/sosuke/pen/Pjoqqp */
+  --filter-color-black: invert(0%) sepia(100%) saturate(20%) hue-rotate(283deg) brightness(96%) contrast(101%);
+  --filter-color-white: invert(100%) sepia(1%) saturate(0%) hue-rotate(284deg) brightness(105%) contrast(100%);
+
 }
 
 /* Classic Theme */
@@ -85,6 +91,9 @@
   --opacity-text-disabled: 0.34;
   --opacity-text-inactive: 0.68;
   --opacity-text-active: 1;
+
+  /* Social Footer Logo Filter for Classic Theme */
+  --social-footer-logo-filter: var(--filter-color-black);
 
 }
 
@@ -143,6 +152,8 @@
   --opacity-text-active: 0.9;
 
 
+  /* Social Footer Logo Filter for Classic Theme */
+  --social-footer-logo-filter: var(--filter-color-black);
 }
 
 
@@ -198,6 +209,10 @@
   --opacity-text-disabled: 0.28;
   --opacity-text-inactive: 0.54;
   --opacity-text-active: 0.86;
+
+
+  /* Social Footer Logo Filter for Classic Theme */
+  --social-footer-logo-filter: var(--filter-color-white);
 }
 
 
@@ -382,6 +397,22 @@
 
 /* NOTE: This is a temp. solution and should be removed ASAP!!! */ 
 
+/* Logo Icon - Svg Path */
+path[logo-icon] {
+  d: path("M22.6 4.5H11c-.8 0-1.4.6-1.4 1.4v.7h-.7L6 14.8 3.1 6.6H0v11.3h2.3v-3.1l-.2-5.3 3.1 8.4h1.6l3.1-8.5-.2 5.4V18.1c0 .8.6 1.4 1.4 1.4h11.6c.8 0 1.4-.6 1.4-1.4v-3.6c0 1.1-.3 1.9-1 2.5-.7.6-1.7.8-3 .9h-4.2c1.3 0 2.3-.3 3-.9.3-.3.6-.6.8-1h.4c.6 0 1-.1 1.3-.4.3-.3.5-.7.5-1.1 0-1-.5-1.6-1.6-1.6h-.8c-.3-.4-.8-.8-1.4-.9.4-.2.8-.4 1.1-.8h.7c1.2 0 1.8-.5 1.8-1.4 0-.5-.1-.9-.4-1.1-.3-.2-.8-.3-1.4-.3h-.2c-.2-.4-.5-.8-.9-1.1-.7-.5-1.6-.8-2.9-.8h4c1.4 0 2.4.3 3.1.8.7.5 1.1 1.3 1.1 2.3 0 .5-.1 1-.4 1.5-.3.4-.7.8-1.2.9.5.1 1 .4 1.4.9.3.5.5 1 .5 1.6V5.9c-.4-.8-1-1.4-1.8-1.4zm-5.9 2.8c.7.5 1.1 1.3 1.1 2.3 0 .5-.1 1-.4 1.5-.3.4-.7.8-1.2.9.5.1 1 .4 1.4.9.3.5.5 1 .5 1.6 0 1.1-.3 1.9-1 2.5s-1.7.8-3 .9H12V16h2c.6 0 1-.1 1.3-.4.3-.3.5-.7.5-1.1 0-1-.5-1.6-1.6-1.6H12v-1.7l1.7.1c1.2 0 1.8-.5 1.8-1.4 0-.5-.1-.9-.4-1.1-.3-.2-.8-.3-1.4-.3h-1.6V6.6h1.6c1.3-.1 2.3.2 3 .7z");
+}
+
+/* Marseille - Logo Name - Svg Path */
+path[logoname-marseille] {
+  d: path("M6.3 13.9 4.6 9.1H2.8v6.6h1.4v-1.8l-.1-3.1 1.7 4.9h1l1.8-4.9-.2 3.1v1.8h1.4V9.1H8zM14.9 12.5c0-.6-.2-1-.5-1.3-.4-.3-.8-.5-1.4-.5-.4 0-.8.1-1.1.2-.3.1-.6.3-.7.6-.2.2-.3.5-.3.8h1.3c0-.2.1-.3.2-.4.1-.1.3-.2.5-.2.3 0 .4.1.6.2.1.1.2.3.2.5v.3h-.6c-.7 0-1.3.1-1.7.4-.4.3-.6.7-.6 1.2 0 .4.2.8.5 1.1.3.3.7.4 1.2.4s.9-.2 1.2-.5c0 .2.1.3.1.4h1.3v-.1c-.1-.2-.2-.6-.2-1.1v-2zm-1.3 1.8c-.1.1-.2.3-.4.3-.2.1-.3.1-.5.1s-.4-.1-.5-.2c-.1-.1-.2-.2-.2-.4V14c0-.5.4-.7 1-.7h.5v1zM17.2 11.4v-.6H16v4.9h1.3v-3.2c.2-.3.5-.5 1-.5h.5v-1.3c-.1 0-.3-.1-.4-.1-.6.1-1 .3-1.2.8zM22.2 13c-.2-.1-.5-.2-.8-.2-.3-.1-.6-.1-.7-.2-.1-.1-.2-.2-.2-.4s.1-.3.2-.4c.1-.1.3-.1.5-.1.3 0 .4.1.6.2.1.1.2.3.2.5h1.3c0-.5-.2-.9-.6-1.1-.4-.3-.9-.4-1.5-.4s-1.1.1-1.4.4c-.4.3-.5.7-.5 1.1 0 .7.6 1.2 1.8 1.5.4.1.6.2.8.2.2.1.2.2.2.4s-.1.3-.2.4c-.1.1-.3.1-.6.1s-.5-.1-.6-.2c-.2-.1-.2-.3-.3-.5H19c0 .3.1.6.3.8.2.3.4.5.8.6.3.1.7.2 1.1.2.6 0 1.1-.1 1.5-.4.4-.3.6-.6.6-1.1-.1-.7-.4-1.2-1.1-1.4zM26.2 10.7c-.4 0-.8.1-1.2.3-.3.2-.6.5-.8.9-.2.4-.3.8-.3 1.3v.1c0 .7.2 1.3.7 1.8.5.4 1 .7 1.8.7.4 0 .8-.1 1.1-.2.3-.2.6-.4.8-.7l-.6-.7c-.3.4-.7.5-1.2.5-.3 0-.6-.1-.8-.3-.2-.2-.3-.5-.4-.8h3.1v-.5c0-.8-.2-1.4-.6-1.8-.4-.4-1-.6-1.6-.6zm.8 2.1h-1.8c0-.3.1-.6.3-.8.2-.2.4-.3.6-.3.3 0 .5.1.6.2.2.2.2.4.2.7v.2zM29.8 8.9c-.2 0-.4.1-.5.2-.1.1-.2.3-.2.5s.1.4.2.5c.1.1.3.2.5.2s.4-.1.5-.2c.1-.1.2-.3.2-.5s-.1-.4-.2-.5c-.1-.2-.3-.2-.5-.2zM29.1 10.8h1.3v4.9h-1.3zM31.6 8.7h1.3v7h-1.3zM34.1 8.7h1.3v7h-1.3zM38.6 10.7c-.4 0-.8.1-1.2.3-.3.2-.6.5-.8.9-.2.4-.3.8-.3 1.3v.1c0 .7.2 1.3.7 1.8.5.4 1 .7 1.8.7.4 0 .8-.1 1.1-.2.3-.2.6-.4.8-.7l-.7-.7c-.3.4-.7.5-1.2.5-.3 0-.6-.1-.8-.3-.2-.2-.3-.5-.4-.8h3.1v-.5c0-.8-.2-1.4-.6-1.8-.3-.4-.8-.6-1.5-.6zm.9 2.1h-1.8c0-.3.1-.6.3-.8.2-.2.4-.3.6-.3.3 0 .5.1.6.2.2.2.2.4.2.7v.2zM53.8 11.7c-.3 0-.5.1-.6.3-.2.2-.3.4-.3.8h1.8v-.1c0-.3-.1-.5-.2-.7-.2-.2-.5-.3-.7-.3zM58.9 11.7c-.4 0-.7.2-.9.5v1.9c.2.3.5.5.9.5s.7-.2.8-.6c.1-.2.1-.5.1-.9 0-.5-.1-.9-.2-1.1-.2-.2-.4-.3-.7-.3zM48.4 12.8h-1.2v1.8h1.2c.3 0 .6-.1.8-.2.2-.2.3-.4.3-.6-.1-.7-.5-1-1.1-1zM49.2 11c0-.3-.1-.5-.3-.6-.2-.1-.4-.2-.8-.2h-1v1.7h1c.8-.1 1.1-.4 1.1-.9zM64 11.7c-.3 0-.5.1-.6.3-.2.2-.3.4-.3.8h1.8v-.1c0-.3-.1-.5-.2-.7-.2-.2-.4-.3-.7-.3z");
+}
+
+/* Bebe - Logo Name - Svg Path */
+path[logoname-bebe] {
+  d: path("M66.7 6.3H45.4c-1.4 0-2.5 1.1-2.5 2.5v6.4c0 1.4 1.1 2.5 2.5 2.5h21.3c1.4 0 2.5-1.1 2.5-2.5V8.8c0-1.4-1.1-2.5-2.5-2.5zm-2.6 2.4h1.4l-1.3 1.4h-1.1l1-1.4zm-10.2 0h1.4L54 10.1h-1l.9-1.4zm-3.8 6.4c-.4.3-1 .5-1.7.5h-2.6V9h2.3c.8 0 1.4.2 1.8.5.4.3.6.8.6 1.4 0 .3-.1.6-.2.9-.2.2-.4.4-.7.5.3.1.6.3.8.5.2.3.3.6.3.9 0 .6-.2 1.1-.6 1.4zm5.8-1.5h-3.1c0 .3.2.6.4.8.2.2.5.3.8.3.5 0 .9-.2 1.2-.5l.6.7c-.2.3-.5.5-.8.7-.3.2-.7.2-1.1.2-.7 0-1.3-.2-1.8-.7-.5-.4-.7-1-.7-1.8v-.1c0-.5.1-.9.3-1.3.2-.4.5-.7.8-.9.3-.2.7-.3 1.2-.3.7 0 1.2.2 1.6.6.4.4.6 1 .6 1.8v.5zm5.2-.4c0 .8-.2 1.4-.5 1.8-.3.4-.8.7-1.4.7-.5 0-1-.2-1.3-.6l-.1.5h-1.2v-7H58v2.5c.3-.4.7-.5 1.2-.5.6 0 1.1.2 1.4.7s.5 1.1.5 1.9zm5.1.4h-3.1c0 .3.2.6.4.8.2.2.5.3.8.3.5 0 .9-.2 1.2-.5l.6.7c-.2.3-.5.5-.8.7-.3.2-.7.2-1.1.2-.7 0-1.3-.2-1.8-.7-.5-.4-.7-1-.7-1.8v-.1c0-.5.1-.9.3-1.3.2-.4.5-.7.8-.9.3-.2.7-.3 1.2-.3.7 0 1.2.2 1.6.6.4.4.6 1 .6 1.8v.5z");
+}
+
+
 /* Github - Svg Path */
 path[github] {
   d: path("M12 1.9C6.3 1.9 1.6 6.5 1.6 12.2c0 4.6 3 8.4 7 9.8.5.1.7-.3.7-.5v-1.8c-2.9.6-3.5-1.4-3.5-1.4-.4-1.2-1.1-1.5-1.1-1.5-1-.6.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1 1 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.3-.3-4.7-1.1-4.7-5.1 0-1.1.4-2 1.1-2.8-.1-.3-.5-1.3.1-2.7 0 0 .9-.3 2.9 1.1.8-.3 1.7-.4 2.6-.4.9 0 1.8.1 2.6.3 2-1.3 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.7.6.7 1.1 1.7 1.1 2.8 0 4-2.4 4.8-4.7 5.1.4.3.7 1 .7 1.9v2.9c0 .3.2.6.7.5 4.1-1.4 7-5.3 7-9.8C22.3 6.5 17.7 1.9 12 1.9z");
@@ -394,7 +425,7 @@ path[github] {
 
 /* Applying the Mulish, 'Mulish-Regular', system-ui, etc
  * font to all key elements by default... */
-body, h1, h2, p, button, span {
+body, h1, h2, p, button, span, input {
   font-family: Mulish, 'Mulish-Regular', system-ui, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -579,6 +610,20 @@ span {
   display: flex;
 }
 
+
+/* Screens & Fixed Layouts */
+.screen.flex-layout, .flex-layout[fixed] {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: inherit;
+  color: inherit;
+}
+
 /* Vertical Flex */
 .vertical {
   flex-direction: column;
@@ -624,11 +669,15 @@ body {
    
   /* Support for all Webkit browsers. */
   -webkit-font-smoothing: antialiased;
+  -webkit-transition: background-color 200ms ease;
+
   /* Support for Safari and Chrome. */
   text-rendering: optimizeLegibility;
+  transition: background-color 200ms ease;
 
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
+  -moz-transition: background-color 200ms ease;
   
   /* Support for IE. */
   font-feature-settings: 'liga';
@@ -709,13 +758,127 @@ ul[naked], li[naked] {
 /* ==== DEFAULT STYLES ==== */
 
 
+
+/* =============== SPLASH-SCREEN LAYOUT STYLES  ============ */
+
+/* Default Splash Screen Theme Styles */
+#splashScreen {
+  --logo-size: calc(100vw / 2); /* <- Set the logo's size to half of the screen's height */
+  --logo-size-max: 250px;
+
+  --logoname-width: 600px;
+  --logoname-height: 200px;
+}
+
+/* Splash Screen */
+#splashScreen {
+  background: var(--splashscreen-background-color, inherit)
+}
+
+/* Logo Wrapper in Splash Screen */
+#splashScreen > .logo-wrapper {
+  filter: grayscale(1);
+  opacity: 0.5;
+
+  -webkit-transition: opacity 1s ease, filter 2s ease;
+  -moz-transition: opacity 1s ease, filter 2s ease;
+  transition: opacity 1s ease, filter 2s ease;
+
+}
+
+/* Logo Wrapper in an [active] Splash Screen */
+#splashScreen[active] > .logo-wrapper {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* Logo Icon in Splash Screen */
+#splashScreen svg.logo-icon {}
+
+/* Logo Name in Splash Screen */
+#splashScreen svg.logo-name {
+  display: none;
+}
+
+/* App Name in Splash Screen */
+#splashScreen .app-name {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+
+
+/* Progress Bar in Splash Screen */
+#splashScreen progress {
+  /* reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Get rid of default border in Firefox */
+  border: none;
+  margin-top: 24px;
+  overflow: hidden;
+
+  width: var(--splashscreen-progress-width, 70%);
+  height: var(--splashscreen-progress-height, 5px);
+  max-width: var(--splashscreen-progress-width-max, 350px); 
+  border-radius: var(--splashscreen-progress-border-radius, 5px);
+}
+
+/* Styling the progress container using the pseudo class: `-webkit-progress-bar`*/
+#splashScreen progress::-webkit-progress-bar {
+  background-color: var(--splashscreen-progress-bar-color, var(--primary-container-color));
+}
+
+/* Styling the progress' value using the pseudo class: `-webkit-progress-value`*/
+#splashScreen progress::-webkit-progress-value {
+  background-color: var(--splashscreen-progress-value-color, var(--primary-color));
+  transition: width 60ms ease;
+}
+
+
+/* == Drawer Styles == */
+
+/* All the direct kids of body */
+/* NOTE: This is what I call an I.D.S (Initial Drawer State) */
+body > * {
+  /* For Google Chrome */
+  -webkit-transition: transform var(--drawer-transition-duration, 0.3s) ease-in-out 0s;
+  -webkit-transform: translateX(0%);
+  /* For Firefox */
+  -moz-transition: transform var(--drawer-transition-duration, 0.3s) ease-in-out 0s;
+  -moz-transform: translateX(0%);
+  /* Other Browsers */
+  transition: transform var(--drawer-transition-duration, 0.3s) ease-in-out 0s;
+  transform: translateX(0%);
+}
+
+/* Drawer Opened */
+
+body[drawer-opened] #appLayout {
+  overflow: hidden;
+}
+
+body[drawer-opened] > * {
+  -webkit-transform: translateX(-80%);
+  -moz-transform: translateX(-80%);
+  transform: translateX(-80%);
+}
+
+/* == End of Drawer Styles == */
+
+
+
+
 /* == Layout Styles == */
 
-/* Layout */
-#layout {
+/* App Layout */
+#appLayout {
   flex: 1 auto;
   background: var(--background-color);
   overflow: scroll;
+  scroll-behavior: smooth;
 }
 
 
@@ -752,8 +915,10 @@ video.wallpaper {}
  /*opacity: var(--opacity-icon-disabled);*/
 }
 
+/* Overlay of a smooth header */
 #header[smooth] > .overlay {
-  background: linear-gradient(180deg, rgba(0,0,0,0.5), transparent, var(--background-color));
+  /* background: linear-gradient(180deg, rgba(0,0,0,0.5), transparent, var(--background-color)); */
+  background: linear-gradient(180deg, var(--background-color), transparent, var(--background-color));
 }
 
 /* == End of Layout Styles == */
@@ -775,6 +940,13 @@ video.wallpaper {}
 
 #header[smooth] {
   background: linear-gradient(180deg, var(--primary-container-color), var(--background-color));
+}
+
+
+/* Fullscreen header */
+#header[fullscreen] {
+  height: var(--fullscreen-header-height, 100%);
+  min-height: var(--fullscreen-header-height, 100%);
 }
 
 /* Container of Header */
@@ -825,7 +997,7 @@ video.wallpaper {}
 #toolbar .container {
   width: calc(100% - 24px);
   /* width: calc(100% - 24px); */
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 
@@ -848,11 +1020,30 @@ video.wallpaper {}
 
 /* == Logo Styles == */
 
-/* Logo */
-#logo {
+/* Logo - SVG */
+svg.logo-icon {
   width: var(--logo-size, 36px);
   height: var(--logo-size, 36px);
+  max-width: var(--logo-size-max, 512px);
+  max-height: var(--logo-size-max, 512px);
   fill: var(--logo-color, var(--primary-color));
+}
+
+/* Logo Name */
+#logoname {
+  display: none; /* Hide it in a mobile layout */
+}
+
+/* Logo Name - SVG (i.e. Marseille Bebe)*/
+svg.logo-name {
+  width: var(--logoname-width, 180px);
+  height: var(--logoname-height, 60px);
+  fill: var(--logoname-color, var(--primary-color));
+
+  -webkit-transition: fill 200ms ease;
+  -moz-transition: fill 200ms ease;
+  transition: fill 200ms ease;
+
 }
 
 /* == End of Logo Styles == */
@@ -864,12 +1055,16 @@ video.wallpaper {}
 /* == Icon-Buttons Styles == */
 
 /* Icon-Buttons */
-.icon-buttons {}
+.icon-buttons {
+  flex: 1 auto;
+  justify-content: end;
+}
 
 /* All buttons in Icon-Buttons */
 .icon-buttons > button {
   pointer-events: auto;
   cursor: pointer;
+  margin: 4px;
 }
 
 .icon-button:hover > span {
@@ -923,13 +1118,72 @@ span.divider {
 
 /* Content or Main */
 #content {
-  padding-bottom: var(--footer-tabs-height, 60px);
+  /* padding-bottom: var(--footer-tabs-height, 60px); */
 }
 
 /* All direct sections in content */
 #content > section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
   padding: 8px 16px;
 }
+
+
+
+
+/***** [sea] SECTION Styles ******/
+
+/* Sea Section in Content */
+#content > section[sea] {
+  min-height: 500px;
+  background: var(--surface-variant-color);
+  padding-top: calc(100vw / 7);
+  padding-bottom: calc(100vw / 7);
+}
+
+/* ::BEFORE - Sea Section in Content */
+#content > section[sea]::before {
+  content: '';
+  width: 100%;
+  height: calc(100vw / 7);
+  position: absolute;
+  -webkit-mask: url('../assets/wave.svg') no-repeat 50% 50%;
+  mask: url('../assets/wave.svg') no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  left: 0;
+  top: 0;
+  right: 0;
+  transform: rotate(180deg) translateY(10px);
+  background-color: var(--background-color);
+}
+
+
+/* ::AFTER - Sea Section in Content */
+#content > section[sea]::after {
+  content: '';
+  width: 100%;
+  height: calc(100vw / 7);
+  position: absolute;
+  -webkit-mask: url('../assets/wave.svg') no-repeat 15% 50%;
+  mask: url('../assets/wave.svg') no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(10px);
+  background-color: var(--background-color);
+}
+
+/*** END of [sea] SECTION Styles ***/
+
+
+
+
+
 
 /* == End of Content Styles */
 
@@ -978,6 +1232,7 @@ span.divider {
   width: 100%;
   height: 100%;
   color: var(--on-background-color);
+  cursor: pointer;
 }
 
 /* All icons in #footerTabs */
@@ -1001,6 +1256,209 @@ span.divider {
 
 
 
+
+
+/* ==< Mobile Footer Styles >== */
+
+/* Mobile Footer */
+footer[mobile] {}
+
+/* Link Footer for Laptop */
+footer[mobile] > .links-footer {}
+
+/* Social Footer for Laptop */
+footer[mobile] > .social-footer {}
+
+/* Copyright Footer for Laptop */
+footer[mobile] > .copyright-footer {}
+/* ==> End of Mobile Footer Styles <== */
+
+
+
+
+
+
+/* ==< Laptop Footer Styles >== */
+
+/* Laptop Footer */
+footer[laptop] {
+  font-size: 16px;
+}
+
+/* All the unordered list in Laptop Footer */
+footer[laptop] ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+footer[laptop] h2 {
+  color: var(--primary-color);
+}
+
+/* All links or `<a>` for Laptop Footer */
+footer[laptop] a {
+  display: block;
+  white-space: nowrap;
+  text-decoration: none;
+  color: inherit;
+  opacity: var(--opacity-text-inactive); 
+}
+
+/* Hovering over any link or `<a>` for Laptop Footer */
+footer[laptop] a:hover {
+  text-decoration: underline;
+  color: var(--tertiary-color);
+  opacity: var(--opacity-text-active);
+}
+
+footer[laptop] .links a:hover {
+  /* color: var(--on-background-color); */
+}
+
+
+/* Link Footer for Laptop */
+footer[laptop] > .link-footer {
+  flex-direction: column;
+  margin: 24px 0;
+  padding: 8px 16px;
+}
+
+/* Links Wrapper & Newsletter Wrapper in Link Footer for Laptop */
+footer[laptop] > .link-footer .links-wrapper,
+footer[laptop] > .link-footer .newsletter-wrapper {
+  
+}
+
+footer[laptop] > .link-footer .links-wrapper {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+footer[laptop] > .link-footer .newsletter-wrapper {
+  text-align: center;
+}
+
+/* Form in Newsletter Wrapper */
+footer[laptop] .newsletter-wrapper form {
+  justify-content: center;
+  border-radius: 40px;
+  overflow: hidden;
+  border: 2px solid var(--primary-container-color);
+  width: 90%;
+  height: 40px;
+  margin: 16px auto;
+}
+
+/* Input in Newsletter Wrapper */
+footer[laptop] .newsletter-wrapper input:not([type="submit"]) {
+  border: 0;
+  flex: 1;
+  padding: 0 16px;
+  font-size: 14px;
+  background: none;
+  color: var(--on-background-color);
+}
+
+/* Button in Newslleter's form */
+footer[laptop] .newsletter-wrapper input.button {
+  text-transform: uppercase;
+  border: 0;
+  background: var(--primary-container-color);
+  color: var(--on-primary-container-color);
+  font-weight: bold;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+
+footer[laptop] .hashtag {
+  color: var(--tertiary-color);
+  font-weight: bold;
+}
+
+/* Links in Link Footer for Laptop */
+footer[laptop] > .link-footer .links {
+  margin: 0 16px;
+  font-size: smaller;
+  flex: 1;
+}
+/* H2 in footer links */
+footer[laptop] > .link-footer .links h2 {
+  opacity: var(--opacity-text-disabled);
+  font-size: large;
+  margin: 16px 8px 0 0;
+}
+
+/* */
+footer[laptop] > .link-footer  {
+
+}
+
+
+/* Social Footer for Laptop */
+footer[laptop] > .social-footer {
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 24px;
+  height: auto;
+}
+
+/* LogoName in Social Footer for Laptop */
+footer[laptop] > .social-footer .logo-name {
+  opacity: var(--opacity-icon-inactive);
+  cursor: pointer;
+  fill: var(--footer-logoname-color, var(--on-background-color));
+}
+
+
+footer[laptop] > .social-footer .logo-name:hover {
+  fill: var(--footer-logoname-color-hover, var(--primary-color));
+}
+
+/* Unordered Social List in Social Footer for Laptop */
+footer[laptop] > .social-footer ul.social {
+  margin: 0;
+}
+
+
+/* All the logos in Social Footer for Laptop */
+footer[laptop] > .social-footer .logo {
+  width: 20px;
+  height: 20px;
+  filter: var(--social-footer-logo-filter);
+  margin: 6px 12px;
+  opacity: var(--opacity-icon-disabled);
+}
+
+footer[laptop] > .social-footer .logo:hover {
+  opacity: var(--opacity-icon-active);
+}
+
+
+
+/* Copyright Footer for Laptop */
+footer[laptop] > .copyright-footer {
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 8px 16px;
+}
+
+/* All links or `<a>` in Copyright Footer for Laptop */
+footer[laptop] > .copyright-footer a {
+  display: inline-block;
+}
+
+/* Authors span in footer for laptop */
+footer[laptop] span.authors {
+  font-size: 12px;
+}
+
+/* ==> End of Laptop Footer Styles <== */
 
 
 /*********** WIDE LAYOUT ************/
@@ -1065,7 +1523,36 @@ span.divider {
 
   /* ==== END of TYPOGRAPHY ==== */
 
+  
+  /* Logo Icon*/
+  #logo {
+    display: none !important; /* Hide the logo icon (i.e. M33) */
+  }
 
+  /* Logo Name */
+  #logoname {
+    display: block !important; /* Show the logoname (i.e. Marseille Bebe)*/
+  }
+
+  #splashScreen {
+    --splashscreen-progress-height: 10px;
+  }
+
+  /* Logo Icon in Splash Screen */
+  #splashScreen svg.logo-icon {
+    display: none;
+  }
+
+  /* Logo Name in Splash Screen */
+  #splashScreen svg.logo-name {
+    display: block;
+  }
+
+  /* App Name in Splash Screen */
+
+  #splashScreen .app-name {
+    display: none;
+  }
 
   /* ==== Other CSS Styles === */
 
@@ -1120,7 +1607,120 @@ span.divider {
   section > article.flex-layout.reverse {
     flex-direction: row-reverse !important;
   }
- 
+
+
+    
+    
+  /* ==< Laptop Footer Styles >== */
+    
+  /* Laptop Footer */
+  footer[laptop] {
+    font-size: 18px;
+  } 
+    
+  /* All the unordered list in Laptop Footer */
+  footer[laptop] ul {} 
+    
+  /* All links or `<a>` for Laptop Footer */
+  footer[laptop] a {} 
+    
+  /* Hovering over any link or `<a>` for Laptop Footer */
+  footer[laptop] a:hover {} 
+    
+    
+  /* Link Footer for Laptop */
+  footer[laptop] > .link-footer {
+    flex-direction: row-reverse;
+    padding: 24px 48px;
+    justify-content: space-around;
+  }
+
+    
+  /* Links Wrapper & Newsletter Wrapper in Link Footer for Laptop */
+  footer[laptop] > .link-footer .links-wrapper,
+  footer[laptop] > .link-footer .newsletter-wrapper {}
+
+
+  footer[laptop] > .link-footer .links-wrapper {}
+
+  footer[laptop] > .link-footer .newsletter-wrapper {
+    max-width: 350px;
+    text-align: left;
+  }
+
+
+  /* Form in Newsletter Wrapper */
+  footer[laptop] .newsletter-wrapper form {
+    width: 100%;
+    height: 48px;
+  }
+
+  /* Input in Newsletter Wrapper */
+  footer[laptop] .newsletter-wrapper input:not([type="submit"]) {
+    padding: 0 24px;
+    font-size: 18px;
+  }
+
+  /* Button in Newslleter's form */
+  footer[laptop] .newsletter-wrapper input.button  {
+    /* padding: 0 18px; */
+  }
+    
+  /* Links in Link Footer for Laptop */
+  footer[laptop] > .link-footer .links {
+    font-size: inherit;
+  } 
+    
+  /* H2 in footer links */
+  footer[laptop] > .link-footer .links h2 {
+    font-size: 34px;
+    margin: 20px 0;
+  }
+
+  /* */
+  footer[laptop] > .link-footer  {} 
+    
+    
+  /* Social Footer for Laptop */
+  footer[laptop] > .social-footer {
+    flex-direction: row;
+    height: 60px;
+  } 
+    
+  /* LogoName in Social Footer for Laptop */
+  footer[laptop] > .social-footer .logo-name {} 
+    
+    
+  footer[laptop] > .social-footer .logo-name:hover {} 
+    
+  /* Unordered Social List in Social Footer for Laptop */
+  footer[laptop] > .social-footer ul.social {} 
+    
+    
+  /* All the logos in Social Footer for Laptop */
+  footer[laptop] > .social-footer .logo {} 
+    
+  footer[laptop] > .social-footer .logo:hover {} 
+    
+    
+    
+  /* Copyright Footer for Laptop */
+  footer[laptop] > .copyright-footer {
+    flex-direction: row;
+  } 
+    
+  /* All links or `<a>` in Copyright Footer for Laptop */
+  footer[laptop] > .copyright-footer a {} 
+  
+  
+  /* Authors span in footer for laptop */
+  footer[laptop] span.authors {
+    font-size: inherit;
+  }
+
+  /* ==> End of Laptop Footer Styles <== */
+    
+      
 
 }
 

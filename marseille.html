@@ -16,7 +16,7 @@
 -->
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <!-- Head -->
   <head>
     
@@ -24,13 +24,13 @@
     <meta name="generator" content="Ville Marseille">
     <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <meta name="description" content="Ville Marseille">
+    <meta name="description" content="City of Marseille">
     
     <!-- MOTTO -->
     <meta name="motto" content="We'll always do more ;)">
 
     <!-- Title -->
-    <title>Ville Marseille</title>
+    <title>Marseille Bébé</title>
    
     <!-- Fonts, Fonts, Fonts !!! -->
     <!-- NOTE: I really don't like doing it this way but I run outta time , soo....:( -->
@@ -47,7 +47,7 @@
 
 
     <!-- Base -->
-    <!-- <base href="/"> -->
+    <base href="ville-marseille">
 
     <link rel="icon" href="assets/images/favicon.ico">
 
@@ -59,12 +59,12 @@
 
     <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Ville Marseille">
+    <meta name="application-name" content="Marseille Bébé">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Favorite Apps">
+    <meta name="apple-mobile-web-app-title" content="Marseille Bébé">
 
     <!-- Homescreen icons -->
     <link rel="apple-touch-icon" href="assets/images/manifest/icon-48x48.png">
@@ -77,28 +77,154 @@
     <link rel="stylesheet" href="css/marseille.css">
     <!-- NOTE: Uncomment & update/edit the stylesheet link below -->
     <!-- <link rel="stylesheet" href="css/marseille-xxx.css" -->
+   
     
     <!-- Script -->
+    <!-- ^^^^^^ Like previously stated, "A little JS doesn't hurt ;)" -->
+    <script>
+      /*
+       * Once again, I'm well aware that this project doesn't require a script but
+       * I couldn't help myself. So.... Bite me twice!! ;)
+       */
+
+
+      // Create `marseilleBebe` object variable with a `isReady` key 
+      var marseilleBebe = { 
+        isReady: false,
+        onReady: () => {} 
+      }; // <- `false` 'cause duh!! We ain't ready yet!! 
+
+
+      // Let's do some stuff when this page loads...
+      // NOTE: This is just a simulation 
+      window.addEventListener('load', (event) => { 
+        // ...Define a couple of constants & variables
+
+        // Set some constants
+        const TIMEOUT_PROGRESS = 60; // 0.3 seconds = 300 milliseconds
+        const INCREMENT_PROGRESS = 1;
+        
+        // Intialize some variables
+        let currentProgress = 0;
+
+        // Now, get the document as doc
+        let doc = event.target;
+
+        
+        // Get the splash screen element as `splashScreenEl`
+        let splashScreenEl = doc.getElementById('splashScreen');
+        // Get the progress bar element from `splashScreenEl` as `progressBarEl`
+        let progressBarEl = splashScreenEl.querySelector('progress');
+
+        // Get the app layout element as `appLayoutEl`
+        let appLayoutEl = doc.getElementById('appLayout');
+        // GEt the footer tabs element as `footerTabsEl`
+        let footerTabsEl = doc.getElementById('footerTabs');
+        
+        
+        // Create a progress handler
+        let progressHandler = () => {
+          // Update the current progress with the progress bar's value
+          progressCount = progressBarEl.value;
+
+          // DEBUG [4dbsmaster]: tell me about it :)
+          console.log(`[progressHandler](1): progressCount => ${progressCount}`);
+
+          // NOTE: You can do something with `progressCount` here
+          
+          switch (progressCount) {
+            case 5: // <- Do something at 5%
+              break;
+            case 25: // <- Do something at 25%
+              // Activate the splash screen by adding or setting the attribute 'active'
+              splashScreenEl.setAttribute('active', '');
+              break;
+            case 60: // <- AT 60%...
+
+              // First check for browser support
+              // if the browser supports it...
+              if (typeof(Storage) !== 'undefined') {
+                // ...get the theme from local storage as `theme`
+                let theme = localStorage.getItem('theme');
+                // DEBUG [4dbsmaster]: tell me about it :)
+                console.log(`[_progressHandler]: theme => ${theme}`);
+               
+                // if a theme was found in storage...
+                if (typeof(theme) == 'string') {
+                  // ...remove all the themes in body
+                  document.body.classList.remove('light', 'dark');
+                  // update the theme
+                  document.body.classList.add(theme);
+                }
+              
+              }
+              break;
+            case 75: // <- Do something at 75%
+              break;
+            case 100: // <- AT 100%...
+
+              // marseilleBebe is READY!!!
+              marseilleBebe.isReady = true;
+
+              // call the `onReady` function of `marseilleBebe`
+              marseilleBebe.onReady();
+
+              // So, hide the splash screen
+              splashScreenEl.hidden = true;
+
+              // And show both the app layout & footer tabs
+              appLayoutEl.hidden = false;
+              footerTabsEl.hidden = false;
+              
+              // Now, stop the progress Timer 
+              clearInterval(progressTimer);
+
+              // DEBUG [4dbsmaster]: tell me about it :)
+              console.log(`[progressHandler](2): MarseilleBebe is \x1b[32mReady\x1b[0m !!!`);
+              break;
+            default:
+              // Maybe do something otherwise
+          }
+
+         
+          // Increase the progress value by the predefined `INCREMENT_PROGRESS`
+          progressBarEl.value += INCREMENT_PROGRESS;
+
+         
+        };
+        
+        // Let's set an interval named `progressTimer` to run our
+        // `progressHandler` every 0.3 seconds.
+        progressTimer = setInterval(progressHandler, TIMEOUT_PROGRESS);
+
+      });
+
+    </script>
+    
+    <!-- Double Psych!!! Some more script for ya! #LOL -->
     <script src="script/marseille.js"></script>
 
   </head>
   
   <!-- Body -->
-  <body class="theme dark" fullbleed>
+  <body class="theme light" fullbleed>
     
-    <!-- Layout -->
-    <div id="layout" class="vertical flex-layout">
+    <!-- App Layout -->
+    <div id="appLayout" class="vertical flex-layout" hidden>
     
       <!-- Header -->
-      <!-- NOTE: try the `smooth` attribute to fall in love #LOL -->
+      <!-- NOTE 1: try the `smooth` attribute to fall in love #LOL -->
+      <!-- NOTE 2: Now, add the `fullscreen` attribute to be the center of the world! ;) -->
       <div id="header" class="vertical flex-layout">
 
         <!-- Wallpaper Image -->
         <!-- <img class="wallpaper" src="assets/images/marseille-wallpaper.jpg" fit> -->
 
         <!-- Wallpaper Video -->
-        <!-- <video class="wallpaper" autoplay>
+        <!-- <video class="wallpaper" poster="assets/images/marseille-wallpaper.jpg" autoplay fit>
           <source src="assets/videos/marseille-video.mp4">
+          <param name="autoplay" value="true">
+          <param name="volume" value="0">
         </video> -->
           
         <!-- Overlay -->
@@ -108,16 +234,29 @@
         <div id="toolbar" class="vertical flex-layout centered">
           <!-- ToolBar Container -->
           <div class="container horizontal flex-layout center">
-            <!-- Logo -->
-            <svg id="logo" xml:space="preserve" viewBox="0 0 24 24" width="24" height="24">
-              <path d="m1.8 20.5 9.3-17v17zM22.2 7.7l-9.3-4.2v17l9.3-4.2-4.7-4.3z"/>
-              <path d="m12.9 20.5 9.3-4.2-9.3-8.6z" opacity=".1"/>
-            </svg>
 
-            <!-- <span flex></span> -->
+            <a href="#">
+              <!-- Logo -->
+              <svg id="logo" class="logo-icon" xml:space="preserve" viewBox="0 0 24 24" width="24" height="24">
+                <path logo-icon />
+              </svg>
+
+              <!-- Logoname -->
+              <svg id="logoname" class="logo-name" xml:space="preserve" viewBox="0 0 72 24" width="72" height="24">
+                <path logoname-marseille />
+                <path logoname-bebe />
+              </svg>
+
+              <!-- <span flex></span> -->
+            </a>
 
             <!-- Icon Buttons -->
             <div class="icon-buttons horizontal flex-layout">
+              <!-- Translate - Icon Button -->
+              <button id="translateIconButton" class="icon-button horizontal flex-layout centered" naked>
+                <span class="material-icons-round md-light md-24">translate</span>
+              </button>
+
               <!-- Theme - Icon Button -->
               <button id="themeIconButton" class="icon-button horizontal flex-layout centered" naked>
                 <span class="material-icons-round md-light md-24">format_paint</span>
@@ -141,9 +280,9 @@
         <div class="container vertical flex-layout">
           
           <!-- Title -->
-          <h1 class="title">Ville de Marseille</h1>
+          <h1 class="title">Welcome to Marseille</h1>
           <!-- Description -->
-          <p class="description">This is a short description about the amazing city of Marseille</p>
+          <p class="description">Or like we say here: <b>Marseille Bébé</b> &#128516;</p>
 
           <!-- Divider-Wrapper -->
           <!-- <span class="divider-wrapper"><span class="divider"></span></span> -->
@@ -155,7 +294,7 @@
       <!-- End of Header -->
 
     
-      <!-- Content -->
+      <!-- Content - MAIN -->
       <main id="content" class="vertical flex-layout">
 
 
@@ -229,17 +368,194 @@
 
         </section>
         <!-- End of First Section -->
+        
+        <!-- Second section -->
+        <!-- NOTE 3: Try the `sea` attribute to swim like a true 'Marseillais' -->
+        <section sea>
+          <h2>Hello, There !!!</h2>
+          <p>This is the <strong>sea section</strong></p>
+          <!-- NOTE 4: Add whatever you want in this second section -->
+        </section>
+        <!-- End of Second Section -->
 
 
       </main>
-      <!-- End of Content -->
+      <!-- End of Content - MAIN -->
 
+
+      <!-- Footer [Mobile] -->
+      <footer mobile></footer>
+      <!-- End of Footer [Mobile] -->
+
+      <!-- Footer [Laptop] -->
+      <footer class="vertical flex-layout" laptop>
+
+        <!-- Link Footer (First Footer Wrapper) -->
+        <div class="link-footer wrapper flex-layout">
+          
+          <!-- Newsletter Wrapper -->
+          <div class="newsletter-wrapper vertical flex-layout">
+            <h2>Want our best tips?</h2>
+            <p>We send our best strategies in a juicy weekly newsletter. <b class="hashtag">#HotStuff</b></p>
+            
+            <!-- Newsletter - FORM -->
+            <form class="newsletter horizontal flex-layout" action="#" method="post" target="_blank">
+              <input type="email" name="email" placeholder="Your e-mail">
+              <input type="submit" value="Sign Up" class="button">
+            </form>
+            <!-- End of Newsletter - FORM -->
+
+          </div>
+          <!-- End of Newsletter Wrapper -->
+
+          <!-- Links Wrapper | Horizontal Flex-Layout -->
+          <div class="links-wrapper horizontal flex-layout">
+
+            <!-- News Links -->
+            <div class="links news">
+              <h2>News</h2>
+              <ul>
+                <li><a href="">News Link #1</a></li>
+                <li><a href="">News Link #2</a></li>
+                <li><a href="">News Link #3</a></li>
+              </ul>  
+            </div>
+            <!-- End of News Links -->
+
+
+            <!-- Museums Links -->
+            <div class="links museums">
+              <h2>Museums</h2>
+              <ul>
+                <li><a href="">Museums Link #1</a></li>
+                <li><a href="">Museums Link #2</a></li>
+                <li><a href="">Museums Link #3</a></li>
+              </ul>  
+            </div>
+            <!-- End of Museums Links -->
+
+
+            <!-- Parks Links -->
+            <div class="links parks">
+              <h2>Parks</h2>
+              <ul>
+                <li><a href="">Parks Link #1</a></li>
+                <li><a href="">Parks Link #2</a></li>
+                <li><a href="">Parks Link #3</a></li>
+              </ul>  
+            </div>
+            <!-- End of Parks Links -->
+
+
+            <!-- Beaches Links -->
+            <div class="links beaches">
+              <h2>Beaches</h2>
+              <ul>
+                <li><a href="">Beaches Link #1</a></li>
+                <li><a href="">Beaches Link #2</a></li>
+                <li><a href="">Beaches Link #3</a></li>
+              </ul>  
+            </div>
+            <!-- End of Beaches Links -->
+
+
+            <!-- History Links -->
+            <div class="links history">
+              <h2>History</h2>
+              <ul>
+                <li><a href="">History Link #1</a></li>
+                <li><a href="">History Link #2</a></li>
+                <li><a href="">History Link #3</a></li>
+              </ul>  
+            </div>
+            <!-- End of History Links -->
+
+          </div>
+          <!-- End of Links Wrapper | Horizontal Flex-Layout -->
+
+        </div>
+        <!-- End of Link Footer (First Footer Wrapper) -->
+        
+
+
+
+
+        <!-- Social Footer (Second Footer Wrapper) -->
+        <div class="social-footer wrapper flex-layout center">
+          <!-- Logoname -->
+          <svg class="logo-name" xml:space="preserve" viewBox="0 0 72 24" width="72" height="24">
+            <path logoname-marseille />
+            <path logoname-bebe />
+          </svg>
+          
+          <!-- Socials -->
+          <ul class="socials horizontal flex-layout">
+            <!-- Facebook -->
+            <li>
+              <a href="" title="Follow 'Marseille Bebe' on Facebook" target="_blank">
+                <img class="logo" src="assets/logos/svg/logo-facebook.svg" alt="Facebook official page">
+              </a>
+            </li>
+
+            <!-- Twitter -->
+            <li>
+              <a href="" title="Follow 'Marseille Bebe' on Twitter" target="_blank">
+                <img class="logo" src="assets/logos/svg/logo-twitter.svg" alt="Twitter official page">
+              </a>
+            </li>
+
+            <!-- Instagram -->
+            <li>
+              <a href="" title="Follow 'Marseille Bebe' on Instagram" target="_blank">
+                <img class="logo" src="assets/logos/svg/logo-instagram.svg" alt="Instagram official account">
+              </a>
+            </li>
+
+            <!-- YouTube -->
+            <li>
+              <a href="" title="Follow 'Marseille Bebe' on YouTube" target="_blank">
+                <img class="logo" src="assets/logos/svg/logo-youtube.svg" alt="YouTube official page">
+              </a>
+            </li>
+
+          </ul>
+          <!-- End of Socials -->
+        </div>  
+        <!-- End of Social Footer (Second Footer Wrapper) -->
+
+
+
+
+
+        <!-- Copyright Footer (Third Footer Wrapper) -->
+        <div class="copyright-footer wrapper flex-layout centered">
+          <!-- Copyright -->
+          <span class="copyright txt md-disabled">&copy; Copyright 2022. All Rights Reserved</span>
+
+          <!-- NOTE: Using a dot as a separator -->
+          <span class="dot">&nbsp;&bull;&nbsp;</span>
+
+          <!-- Authors -->
+          <span class="authors">Made with ❤️  by 
+            <a href="https://github.com/abraham-ukachi" target="_blank">abraham</a>,&nbsp;
+            <a href="https://github.com/rim-moghlali" target="_blank">rim</a>,&nbsp;
+            <a href="https://github.com/christophe-ceccaldi" target="_blank">chris</a>,&nbsp;
+            <a href="https://github.com/katherine-tranchand" target="_blank">katia</a>&nbsp;&amp;&nbsp;
+            <a href="https://github.com/alon-bendavid" target="_blank">alon</a>
+          </span>
+
+        </div>
+        <!-- End of Copyright Footer (Third Footer Wrapper) -->
+
+      </footer>
+      <!-- End of Footer [Laptop] -->
        
     </div>
-    <!-- End of Layout --> 
-     
+    <!-- End of App Layout --> 
+    
+
     <!-- Footer Tabs -->
-    <nav id="footerTabs" class="horizontal flex-layout">
+    <nav id="footerTabs" class="horizontal flex-layout" hidden>
       
       <!-- Divider-Wrapper -->
       <span class="divider-wrapper"><span class="divider"></span></span>
@@ -277,7 +593,7 @@
       </a>
 
       <!-- Contact Tab -->
-      <a class="tab" href="#more">
+      <a class="tab">
         <button id="moreTabButton" class="vertical flex-layout centered" naked>
           <span class="material-icons icon">more_horiz</span>
           <span class="label txt caption md-inactive">More</span>
@@ -289,8 +605,52 @@
 
     <!-- Backdrop -->
     <div id="backdrop" class="fade-in" fit hidden></div>
+  
 
-    <!--  -->
+    <!-- Dialogs -->
+    <div id="dialogs" class="vertical flex-layout centered" fit hidden>
+      <!-- Translate Dialog -->
+      <div id="translateDialog" class="dialog" hidden></div>
+      <!-- End of Translate Dialog -->
+
+
+      <!-- Theme Dialog -->
+      <div id="themeDialog" class="dialog" hidden></div>
+      <!-- End of Theme Dialog -->
+
+    </div>
+    <!-- End of Dialogs -->
+
+    <!-- Splash Screen Layout -->
+    <div id="splashScreen" class="screen vertical flex-layout centered">
+      
+      <!-- Logo Wrapper -->
+      <div class="logo-wrapper">
+        <!-- Logo Icon -->
+        <!-- <img class="logo-icon" src="assets/logos/logo.svg"> -->
+
+        <!-- Logo -->
+        <svg class="logo-icon" xml:space="preserve" viewBox="0 0 24 24" width="24" height="24">
+          <path logo-icon />
+        </svg>
+
+        <!-- Logoname -->
+        <svg class="logo-name" xml:space="preserve" viewBox="0 0 72 24" width="72" height="24">
+          <path logoname-marseille />
+          <path logoname-bebe />
+        </svg>
+        <!-- Logo Name -->
+      </div>
+      <!-- End of Logo Wrapper -->
+
+      <!-- Progress -->
+      <progress value="10" max="100"></progress>
+      
+      <!-- App Name -->
+      <h2 class="app-name txt md-disabled">Marseille Bébé</h2>
+
+    </div>
+    <!-- End of Splash Screen Layout -->
 
   </body>
 
